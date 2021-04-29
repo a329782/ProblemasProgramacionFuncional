@@ -38,18 +38,34 @@ class tienditaDAO{
         return this.productsList.filter(products => products.category === category);
     }
 
-
 }
 
 
-var product1 = new ProductsDAO(1,"Cilantro", 5.99, "Verdura", 50, 39, 160);
-var product2 = new ProductsDAO(2, "Juan", 12, "Persona", 25, 10, 40);
+var productsList = [];
 
-var products = [];
+productsList.push(new Products(1,"Cilantro", 5.99, "Verdura", 50, 39, 160));
+productsList.push(new Products(2, "Juan", 12, "Persona", 25, 10, 40));
 
-for(var i = 1; i < 11; i++)
+let elProducto = new tienditaDAO(productsList);
+
+/*for(var i = 1; i < 11; i++)
 {
     products.push(new ProductsDAO (i, "Cilantro", 4.99, "Verdura", 50, 39, 160));
 }
+*/
 
-console.log(products);
+
+console.log("1. El numero de productos con existencia mayor a 20 es: ");
+console.log(elProducto.existenciaMayor(20));
+
+console.log("2. El numero de productos con existencia menor a 15 es: ");
+console.log(elProducto.existenciaMenor(15));
+
+console.log("3. La lista de productos con el precio mayor a 15.50 y la misma clasificacion es: ");
+console.log(elProducto.mismaClasificacionPrecio("Verdura", 15.50));
+
+console.log("4. Las lista de productos con el precio mayor a 20.30 y menor a 45 es: ");
+console.log(elProducto.entrePrecio(20.30, 45.00));
+
+console.log("5. El numero de productos agrupados por su clasificacion es: ");
+console.log(elProducto.mismaClasificacion("Verdura"));
