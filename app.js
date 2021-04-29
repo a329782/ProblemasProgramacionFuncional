@@ -44,7 +44,11 @@ class tienditaDAO{
 var productsList = [];
 
 productsList.push(new Products(1,"Cilantro", 5.99, "Verdura", 50, 39, 160));
-productsList.push(new Products(2, "Juan", 12, "Persona", 25, 10, 40));
+productsList.push(new Products(2, "Platano Chiapas", 5.90, "Fruta", 24, 10, 50));
+productsList.push(new Products(3,"Cebolla", 5.99, "Verdura", 12, 9, 20));
+productsList.push(new Products(4, "Chile Chilaca", 8.80, "Verdura", 18, 10, 40));
+productsList.push(new Products(5,"Patata", 2.90, "Verdura", 8, 5, 12));
+productsList.push(new Products(6, "Lechuga", 4.78, "Verdura", 9, 6, 15));
 
 let elProducto = new tienditaDAO(productsList);
 
